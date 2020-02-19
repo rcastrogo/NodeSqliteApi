@@ -63,7 +63,10 @@ export class DataManager{
   GetAlluser(onSuccess : (err:any,rows:any[]) => any){
     this.OnDatabaseReady( db => {
         db.serialize(() => {
-            db.all("SELECT * FROM Users;", onSuccess );
+            db.all("SELECT * FROM Users;", function(a, b){
+              var __this = this;
+              onSuccess(a, b);
+            } );
         });
         db.close();
     });    

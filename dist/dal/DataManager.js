@@ -45,7 +45,10 @@ var DataManager = /** @class */ (function () {
     DataManager.prototype.GetAlluser = function (onSuccess) {
         this.OnDatabaseReady(function (db) {
             db.serialize(function () {
-                db.all("SELECT * FROM Users;", onSuccess);
+                db.all("SELECT * FROM Users;", function (a, b) {
+                    var __this = this;
+                    onSuccess(a, b);
+                });
             });
             db.close();
         });

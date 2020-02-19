@@ -10,6 +10,8 @@ import {DataManager} from "./dal/DataManager"
 // Create a new express application instance
 const app: express.Application = express();
 
+app.use('/pwa', express.static(__dirname + '/docs'));
+
 // parse requests of content-type - application/x-www-form-urlencoded
 // parse requests of content-type - application/json
 app.use(bodyParser.urlencoded({ extended: true }))

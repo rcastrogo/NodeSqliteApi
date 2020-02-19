@@ -10,6 +10,7 @@ var body_parser_1 = __importDefault(require("body-parser"));
 var DataManager_1 = require("./dal/DataManager");
 // Create a new express application instance
 var app = express_1.default();
+app.use('/pwa', express_1.default.static(__dirname + '/html'));
 // parse requests of content-type - application/x-www-form-urlencoded
 // parse requests of content-type - application/json
 app.use(body_parser_1.default.urlencoded({ extended: true }));
