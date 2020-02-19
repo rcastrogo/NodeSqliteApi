@@ -6,6 +6,8 @@ const staticAssets = [
   './index.html',
   './404.html',
   './css/styles.css',
+  './css/font-awesome.min.css',
+  './css/w3.css',
   './js/index.js',
   './icons/icon-32.png',
   './icons/icon-64.png',
@@ -15,9 +17,7 @@ const staticAssets = [
   './icons/icon-192.png',
   './icons/icon-256.png',
   './icons/icon-512.png',
-  './images/logo.png',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
-  'https://www.w3schools.com/w3css/4/w3.css'
+  './images/logo.png'
 ];
 
 self.addEventListener('install', async event => {
